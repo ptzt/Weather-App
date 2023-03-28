@@ -3,10 +3,6 @@ import './App.css';
 import 'semantic-ui-css/semantic.min.css'
 import Weather from './components/weather'
 
-console.log(process.env.REACT_APP_API_URL)
-console.log(process.env.REACT_APP_API_KEY)
-
-
 function App() {
   const [lat, setLat] = useState([])
   const [long, setLong] = useState([])
@@ -29,7 +25,6 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Weather App</h1>
       {(typeof data.main != 'undefined') ? (
         <Weather weatherData={data} />
       ) : (
